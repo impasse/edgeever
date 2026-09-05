@@ -67,9 +67,7 @@ export type DesktopMemoListParams = {
 export type DesktopMemoCreateParams = {
   notebookId: string;
   title?: string;
-  contentJson?: TiptapDoc;
   contentMarkdown?: string;
-  contentText?: string;
   tags?: string[];
 };
 

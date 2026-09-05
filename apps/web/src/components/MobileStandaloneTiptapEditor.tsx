@@ -13,7 +13,6 @@ import { TableKit } from "@tiptap/extension-table";
 import { createExcerpt, docToMarkdown, docToText, emptyDoc, getImageReferrerPolicy, ImageGallery, isPdfAttachment, MergeDivider, PluginEmbed, type MemoDetail, type MemoEditSession, type Notebook, type TagSummary, type TiptapDoc } from "@edgeever/shared";
 import { createEdgeEverMathematics } from "@edgeever/shared/mathematics";
 import { getMobileEditorInputAttributes, getMobileEditorPlaceholder } from "@edgeever/shared/mobile-editor";
-import { EdgeEverLink } from "@edgeever/shared/editor-link";
 import {
   MobileEditorFallback,
   MobileEditorHeader,
@@ -197,8 +196,7 @@ export const MobileStandaloneTiptapEditor = ({
 
   const editor = useEditor({
     extensions: [
-      StarterKit.configure({ link: false }),
-      EdgeEverLink,
+      StarterKit,
       PdfAttachment,
       FileAttachment,
       TaskList,
